@@ -10,13 +10,17 @@ return {
       --  - yinq - [Y]ank [I]nside [N]ext [Q]uote
       --  - ci'  - [C]hange [I]nside [']quote
       require('mini.ai').setup { n_lines = 500 }
+
+      require('mini.animate').setup()
+
+      require('mini.tabline').setup()
+
       local notify = require 'mini.notify'
       notify.setup {
         lsp_progress = {
           duration_last = 2000,
         },
       }
-
       vim.notify = notify.make_notify()
 
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
