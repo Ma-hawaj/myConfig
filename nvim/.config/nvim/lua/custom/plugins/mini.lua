@@ -17,8 +17,6 @@ return {
         },
       }
 
-      require('mini.tabline').setup()
-
       local notify = require 'mini.notify'
       notify.setup {
         lsp_progress = {
