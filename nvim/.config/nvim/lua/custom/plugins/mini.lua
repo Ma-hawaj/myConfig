@@ -11,7 +11,11 @@ return {
       --  - ci'  - [C]hange [I]nside [']quote
       require('mini.ai').setup { n_lines = 500 }
 
-      require('mini.animate').setup()
+      require('mini.animate').setup {
+        scroll = {
+          enable = false,
+        },
+      }
 
       require('mini.tabline').setup()
 
